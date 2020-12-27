@@ -1,12 +1,11 @@
+import { RequestHandler } from "express";
+
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send('haha123');
-});
+  res.render('index', { title: 'allen' });
+} as RequestHandler);
 
-router.get('/xxx', function(req, res, next) {
-  res.send('haha456');
-});
 module.exports = router;
